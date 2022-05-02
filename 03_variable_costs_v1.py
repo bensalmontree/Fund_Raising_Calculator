@@ -1,7 +1,18 @@
 import pandas
 
-#def num_check(question, error, num_type):
-
+def num_check(question, error, num_type):
+    
+    valid=False
+    while not valid:
+        # Ask user for number and check it is valid
+        try:
+            response=num_type(input(question))
+            if response<=0:
+                print(error)
+            else:
+                return response
+        except ValueError:
+            print(error)
 
 def not_blank(question, error):
 
@@ -70,5 +81,6 @@ for item in add_dollars:
 # Printing area
 
 print(variable_frame)
-
 print()
+
+# 🗿
