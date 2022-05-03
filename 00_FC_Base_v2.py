@@ -1,4 +1,5 @@
 # import libraries
+from numpy import product
 import pandas
 
 # *** Functions go here ***
@@ -103,7 +104,7 @@ def get_expenses(var_fixed):
 # Prints expense frames
 def expense_print(heading, frame, subtotal):
     print()
-    print("**** {} Costs ****")
+    print("**** {} Costs ****".format(heading))
     print(frame)
     print()
     print("{} Costs: ${:.2f}".format(heading, subtotal))
@@ -146,7 +147,7 @@ else:
 print()
 print("**** Fund Raising - {} ****".format(product_name))
 print()
-expense_print("Variable, variable_frame, variable_sub")
+expense_print("Variable", variable_frame, variable_sub)
 
 if have_fixed == "yes":
     expense_print("Fixed", fixed_frame[['Cost']], fixed_sub)
